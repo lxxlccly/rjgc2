@@ -1,12 +1,15 @@
+'''类FindWord的测试代码'''
 from unittest import TestCase, mock
 from mktest2_optimization import FindWord
 
 
 class TestFindWord(TestCase):
+    '''类FindWord的测试'''
     def setUp(self):
         self.find_words = FindWord()
 
     def test_find_word(self):
+        '''find_word的测试'''
         words = 'query.txt'
         document = 'document.txt'
         result = ['1/3,2/3,4/3', '', '', '1/1']

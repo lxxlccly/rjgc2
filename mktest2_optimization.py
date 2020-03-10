@@ -8,6 +8,7 @@ import sys
 
 
 class FindWord(object):
+    '''找出单词在文档中的位置并打印。'''
     def __init__(self):
         self.query = 'query.txt'
         self.document = 'document.txt'
@@ -15,7 +16,7 @@ class FindWord(object):
     def find_word(self, query, document):
         '''找出单词在文档中的位置。
 
-        以问号、句号、感叹号为句子分隔符，输出第几句/第几个词。'''
+        以问号、句号、感叹号为句子分隔符，返回第几句/第几个词。'''
         self.query = query
         self.document = document
         sentence = 0
@@ -68,5 +69,5 @@ if __name__ == '__main__':
     ARGS = sys.argv[1:]
     DOCUMENT = ARGS[0]
     QUERY = ARGS[1]
-    fw = FindWord()
-    fw.find_word(QUERY, DOCUMENT)
+    FW = FindWord()
+    FW.find_word(QUERY, DOCUMENT)
